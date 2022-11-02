@@ -1,3 +1,7 @@
+import simple.X;
+import simple.XImpl;
+import util.U;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +15,17 @@ public class Main {
          */
         //SortStrings.test();
         //LoopLambda.test();
-        ThreadLambda.test();
+        //ThreadLambda.test();
+        //MethodReferences.test();
+        //MainFunctionalInterface.test();
+        X<String,Integer> x = new XImpl();
+        X<String,Integer> y = x.f4("Gabriel",34);
+        Boolean equal = false;
+        U.print(x.toString());
+        U.print(y.toString());
+        if(x.equals(y)){
+            equal = true;
+        }
+        U.print(equal.toString());
     }
 }
